@@ -71,16 +71,13 @@ public class SearchFragment extends Fragment {
         InputMethodManager in = (InputMethodManager) view.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         in.hideSoftInputFromWindow(editText.getWindowToken(), 0);
 
-        daoProduct.searchProducts(
-                editText.getText().toString(),
-                new ResultListener<List<Product>>() {
-                    @Override
-                    public void finish(List<Product> results) {
-                        recyclerView.setVisibility(View.VISIBLE);
-                        productAdapter.dataSetChanged(results);
-                    }
-                })
-        ;
+        daoProduct.searchProducts(editText.getText().toString(), new ResultListener<List<Product>>() {
+            @Override
+            public void finish(List<Product> results) {
+                recyclerView.setVisibility(View.VISIBLE);
+                productAdapter.dataSetChanged(results);
+            }
+        });
 
     }
 
