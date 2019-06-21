@@ -72,7 +72,7 @@ public class ProductAdapter extends RecyclerView.Adapter {
             price.setText("$ " + product.getPrice());
             condition.setText(product.getCondition());
             Glide.with(itemView).load(product.getThumbnail())
-                    .placeholder(R.drawable.product_default_thumbnail)
+                    .placeholder(R.drawable.product_default_thumbnail).centerCrop()
                     .into(thumbnail);
         }
     }

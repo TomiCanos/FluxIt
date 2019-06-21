@@ -1,75 +1,69 @@
 package com.example.fluxitdemo.view;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.view.MenuItem;
 
 import com.example.fluxitdemo.R;
-import com.example.fluxitdemo.model.DAOProduct;
-import com.example.fluxitdemo.model.Product;
-import com.example.fluxitdemo.model.ProductAdapter;
-import com.example.fluxitdemo.model.ResultListener;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText editText;
-    private RecyclerView recyclerView;
-    private DAOProduct daoProduct;
-    private ProductAdapter productAdapter;
+
+    private BottomNavigationView bottomNavigationView;
+    private Fragment selectedFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
-        daoProduct = new DAOProduct();
-        productAdapter = new ProductAdapter(new ArrayList<Product>());
+        setContentView(R.layout.activity_main);
 
         setview();
     }
 
+
     private void setview() {
-        editText = findViewById(R.id.edittxt_search_query);
-        recyclerView = findViewById(R.id.recycler_view_result_products);
+        selectedFragment = new SearchFragment();
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        recyclerView.setAdapter(productAdapter);
+        getSupportFragmentManager().beginTransaction().add(R.id.main_activity_fragment_container, selectedFragment).commit();
 
-        editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        bottomNavigationView = findViewById(R.id.bottom_navigation_view);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-                    performSearch();
-                    return true;
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                switch (menuItem.getItemId()) {
+                    case R.id.navigation_search:
+                        selectedFragment = new SearchFragment();
                 }
-                return false;
+
+                switch (menuItem.getItemId()) {
+                    case R.id.navigation_favourites:
+                        selectedFragment = new FavouritesFragment();
+                }
+
+                switch (menuItem.getItemId()) {
+                    case R.id.navigation_publish:
+                        selectedFragment = new PublishFragment();
+                }
+
+                switch (menuItem.getItemId()) {
+                    case R.id.navigation_notifications:
+                        selectedFragment = new NotificationsFragment();
+                }
+
+                switch (menuItem.getItemId()) {
+                    case R.id.navigation_menu:
+                        selectedFragment = new MenuFragment();
+                }
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_activity_fragment_container, selectedFragment).commit();
+                return true;
             }
         });
-    }
-
-    private void performSearch() {
-        editText.clearFocus();
-        InputMethodManager in = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        in.hideSoftInputFromWindow(editText.getWindowToken(), 0);
-
-        daoProduct.searchProducts(
-                editText.getText().toString(),
-                new ResultListener<List<Product>>() {
-                    @Override
-                    public void finish(List<Product> results) {
-                        productAdapter.dataSetChanged(results);
-                    }
-                })
-        ;
 
     }
 }
