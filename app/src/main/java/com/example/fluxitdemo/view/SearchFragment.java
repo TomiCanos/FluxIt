@@ -30,17 +30,22 @@ public class SearchFragment extends Fragment {
     private RecyclerView recyclerView;
     private DAOProduct daoProduct;
     private ProductAdapter productAdapter;
+    private List<Product> products;
+    private View view;
 
     public SearchFragment() {
         daoProduct = new DAOProduct();
-        productAdapter = new ProductAdapter(new ArrayList<Product>());
+        products = new ArrayList<>();
+        productAdapter = new ProductAdapter(products);
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_search, container, false);
+        view = inflater.inflate(R.layout.fragment_search, container, false);
+        editText = view.findViewById(R.id.edittxt_search_query);
+        recyclerView = view.findViewById(R.id.recycler_view_result_products);
 
         setview(view);
 
@@ -48,9 +53,7 @@ public class SearchFragment extends Fragment {
     }
 
     private void setview(View view) {
-        editText = view.findViewById(R.id.edittxt_search_query);
-        recyclerView = view.findViewById(R.id.recycler_view_result_products);
-
+        recyclerView.setVisibility(View.GONE);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(productAdapter);
 
@@ -80,5 +83,4 @@ public class SearchFragment extends Fragment {
         });
 
     }
-
 }
