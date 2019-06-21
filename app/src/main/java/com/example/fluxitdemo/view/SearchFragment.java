@@ -19,7 +19,7 @@ import android.widget.TextView;
 import com.example.fluxitdemo.R;
 import com.example.fluxitdemo.model.DAOProduct;
 import com.example.fluxitdemo.model.Product;
-import com.example.fluxitdemo.model.ProductAdapter;
+import com.example.fluxitdemo.model.adapters.ProductAdapter;
 import com.example.fluxitdemo.model.ResultListener;
 
 import java.util.ArrayList;
