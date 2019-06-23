@@ -9,9 +9,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.fluxitdemo.R;
 import com.example.fluxitdemo.model.Product;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -71,8 +71,9 @@ public class ProductAdapter extends RecyclerView.Adapter {
             title.setText(product.getTitle());
             price.setText("$ " + product.getPrice());
             condition.setText(product.getCondition());
-            Glide.with(itemView.getContext()).load(product.getThumbnail())
-                    .placeholder(R.drawable.product_default_thumbnail).centerCrop()
+            Picasso.get()
+                    .load(product.getThumbnail()
+                    .replace("http", "https"))
                     .into(thumbnail);
         }
     }
