@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.example.fluxitdemo.R;
 import com.google.android.material.tabs.TabLayout;
@@ -11,6 +12,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
+    private TextView tabTitle;
     private TabLayout tabLayout;
     private Fragment selectedFragment;
     private SearchFragment searchFragment;
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         menuFragment = new MenuFragment();
 
         tabLayout = findViewById(R.id.tabLayout);
+        tabTitle = findViewById(R.id.TabTitle);
 
 
         setview();
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private void setview() {
 
         getSupportFragmentManager().beginTransaction().add(R.id.mainActivityFragmentContainer, searchFragment).commit();
+        tabTitle.setText("Búsqueda");
 
         setBottomTabLayout();
     }
@@ -52,22 +56,27 @@ public class MainActivity extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 switch (tab.getPosition()) {
                     case 0:
+                        tabTitle.setText("Búsqueda");
                         selectedFragment = searchFragment;
                         break;
 
                     case 1:
+                        tabTitle.setText("Favoritos");
                         selectedFragment = favouritesFragment;
                         break;
 
                     case 2:
+                        tabTitle.setText("");
                         selectedFragment = publishFragment;
                         break;
 
                     case 3:
+                        tabTitle.setText("Notificaciones");
                         selectedFragment = notificationsFragment;
                         break;
 
                     case 4:
+                        tabTitle.setText("Mi Cuenta");
                         selectedFragment = menuFragment;
                         break;
 

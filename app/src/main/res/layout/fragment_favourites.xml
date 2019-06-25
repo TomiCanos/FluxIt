@@ -7,16 +7,5 @@
     android:background="@android:color/white"
 tools:context=".view.FavouritesFragment">
 
-    <TextView
-        style="@style/TextViewTitleStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:gravity="center"
-        android:padding="15dp"
-        android:text="Favoritos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
