@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorPrimary"
     tools:context=".view.SearchFragment">
 
     <androidx.cardview.widget.CardView
@@ -15,13 +15,13 @@
         android:layout_margin="8dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="0dp"
-        app:layout_constraintBottom_toTopOf="@id/recycler_view_result_products"
+        app:layout_constraintBottom_toTopOf="@id/recyclerViewResultProducts"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/edittxt_search_query"
+            android:id="@+id/editTextSearchQuery"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/white"
@@ -32,7 +32,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_result_products"
+        android:id="@+id/recyclerViewResultProducts"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@android:color/darker_gray"

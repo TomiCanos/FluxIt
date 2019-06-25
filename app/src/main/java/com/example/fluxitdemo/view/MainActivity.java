@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setview() {
 
-        getSupportFragmentManager().beginTransaction().add(R.id.main_activity_fragment_container, searchFragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.mainActivityFragmentContainer, searchFragment).commit();
 
         setBottomTabLayout();
     }
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.main_activity_fragment_container, selectedFragment).addToBackStack(null).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.mainActivityFragmentContainer, selectedFragment).addToBackStack(null).commit();
 
             }
 

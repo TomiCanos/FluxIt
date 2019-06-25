@@ -44,8 +44,8 @@ public class SearchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_search, container, false);
-        editText = view.findViewById(R.id.edittxt_search_query);
-        recyclerView = view.findViewById(R.id.recycler_view_result_products);
+        editText = view.findViewById(R.id.editTextSearchQuery);
+        recyclerView = view.findViewById(R.id.recyclerViewResultProducts);
 
         setview(view);
 
