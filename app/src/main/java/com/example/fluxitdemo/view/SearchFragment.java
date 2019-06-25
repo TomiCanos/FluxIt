@@ -53,10 +53,12 @@ public class SearchFragment extends Fragment {
     }
 
     private void setview(View view) {
-        recyclerView.setVisibility(View.GONE);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(productAdapter);
 
+        if (!products.isEmpty()) {
+            productAdapter.dataSetChanged(products);
+        }
         editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -79,6 +81,7 @@ public class SearchFragment extends Fragment {
             public void finish(List<Product> results) {
                 recyclerView.setVisibility(View.VISIBLE);
                 productAdapter.dataSetChanged(results);
+                products = results;
             }
         });
 

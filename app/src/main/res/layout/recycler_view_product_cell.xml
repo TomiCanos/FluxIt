@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/white"
-    android:orientation="vertical"
     android:layout_marginTop="0.5dp"
-    android:layout_marginBottom="0.5dp">
+    android:layout_marginBottom="0.5dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:scaleType="centerCrop"
         android:id="@+id/recycler_view_product_thumbnail"
         android:layout_width="@android:dimen/thumbnail_width"
         android:layout_height="@android:dimen/thumbnail_width"
         android:layout_margin="8dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/product_default_thumbnail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,24 +22,22 @@
 
     <TextView
         android:id="@+id/recycler_view_product_title"
+        style="@style/TextViewNormalStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="Apple iPhone 6s 32gb 4g Nuevo+12m Gtia Oficial+factura Aob"
-        android:textColor="@android:color/black"
-        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/recycler_view_product_thumbnail"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/recycler_view_product_price"
+        style="@style/TextViewTitleStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="$ 30.000"
-        android:textColor="@android:color/black"
-        android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/recycler_view_product_thumbnail"
@@ -47,11 +45,11 @@
 
     <TextView
         android:id="@+id/recycler_view_product_condition"
-        android:text="Nuevo"
-        android:textSize="15dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:text="Nuevo"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/recycler_view_product_thumbnail"
         app:layout_constraintTop_toBottomOf="@+id/recycler_view_product_price" />

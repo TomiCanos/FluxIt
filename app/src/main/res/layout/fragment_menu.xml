@@ -14,22 +14,20 @@
         android:orientation="vertical">
 
         <TextView
+            style="@style/TextViewTitleStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
             android:gravity="center"
             android:padding="15dp"
-            android:text="Mi Cuenta"
-            android:textColor="@android:color/black"
-            android:textSize="25sp" />
+            android:text="Mi Cuenta" />
 
         <TextView
+            style="@style/TextViewTitleStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Compras"
-            android:textColor="@android:color/black"
-            android:textSize="20sp" />
+            android:text="Compras" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,12 +41,11 @@
                 android:src="@drawable/circle_image_view_purchases_questions" />
 
             <TextView
+                style="@style/TextViewNormalStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Preguntas"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:text="Preguntas" />
 
         </LinearLayout>
 
@@ -64,12 +61,11 @@
                 android:src="@drawable/circle_image_view_appraisals" />
 
             <TextView
+                style="@style/TextViewNormalStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Presupuestos"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:text="Presupuestos" />
 
         </LinearLayout>
 
@@ -85,12 +81,11 @@
                 android:src="@drawable/circle_image_view_purchases_purchases" />
 
             <TextView
+                style="@style/TextViewNormalStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Compras"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:text="Compras" />
 
         </LinearLayout>
 
@@ -100,12 +95,11 @@
             android:background="@android:color/darker_gray" />
 
         <TextView
+            style="@style/TextViewTitleStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Ventas"
-            android:textColor="@android:color/black"
-            android:textSize="20sp" />
+            android:text="Ventas" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -119,12 +113,11 @@
                 android:src="@drawable/circle_image_view_sells_uploads" />
 
             <TextView
+                style="@style/TextViewNormalStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Publicaciones"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:text="Publicaciones" />
 
         </LinearLayout>
 
@@ -140,12 +133,11 @@
                 android:src="@drawable/circle_image_view_sells_questions" />
 
             <TextView
+                style="@style/TextViewNormalStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Preguntas"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:text="Preguntas" />
 
         </LinearLayout>
 
@@ -161,12 +153,11 @@
                 android:src="@drawable/circle_image_view_appraisals" />
 
             <TextView
+                style="@style/TextViewNormalStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Presupuestos"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:text="Presupuestos" />
 
         </LinearLayout>
 
@@ -182,12 +173,11 @@
                 android:src="@drawable/circle_image_view_sells_sells" />
 
             <TextView
+                style="@style/TextViewNormalStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Ventas"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:text="Ventas" />
 
         </LinearLayout>
 
@@ -197,12 +187,11 @@
             android:background="@android:color/darker_gray" />
 
         <TextView
+            style="@style/TextViewTitleStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Configuración"
-            android:textColor="@android:color/black"
-            android:textSize="20sp" />
+            android:text="Configuración" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -216,12 +205,11 @@
                 android:src="@drawable/circle_image_view_my_account" />
 
             <TextView
+                style="@style/TextViewNormalStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Mis Datos"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:text="Mis Datos" />
 
         </LinearLayout>
 
@@ -237,12 +225,11 @@
                 android:src="@drawable/circle_image_view_configuration_security" />
 
             <TextView
+                style="@style/TextViewNormalStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Seguridad"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:text="Seguridad" />
 
         </LinearLayout>
 
@@ -258,12 +245,11 @@
                 android:src="@drawable/circle_image_view_configuration_reputation" />
 
             <TextView
+                style="@style/TextViewNormalStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Reputación"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:text="Reputación" />
 
         </LinearLayout>
 
@@ -279,12 +265,11 @@
                 android:src="@drawable/circle_image_view_configuration_adjustments" />
 
             <TextView
+                style="@style/TextViewNormalStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Ajustes"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:text="Ajustes" />
 
         </LinearLayout>
 
@@ -300,12 +285,11 @@
                 android:src="@drawable/circle_image_view_configuration_help" />
 
             <TextView
+                style="@style/TextViewNormalStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Ayuda"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:text="Ayuda" />
 
         </LinearLayout>
 
@@ -321,34 +305,33 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/circleImageView"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="16dp"
-                android:src="@drawable/circle_image_view_my_account" />
+                android:src="@drawable/circle_image_view_my_account"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:layout_margin="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@id/circleImageView"
+                style="@style/TextViewNormalStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_margin="16dp"
                 android:gravity="center_vertical"
                 android:text="FluxIt"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/circleImageView"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_margin="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_power_settings_new_black_40dp" />
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_power_settings_new_black_40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
