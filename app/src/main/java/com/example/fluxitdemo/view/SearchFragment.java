@@ -58,6 +58,7 @@ public class SearchFragment extends Fragment {
 
         if (!products.isEmpty()) {
             productAdapter.dataSetChanged(products);
+            recyclerView.setVisibility(View.VISIBLE);
         }
         editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override

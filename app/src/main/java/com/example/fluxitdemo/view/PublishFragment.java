@@ -3,8 +3,7 @@ package com.example.fluxitdemo.view;
 
 import android.os.Bundle;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.Guideline;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -13,19 +12,14 @@ import android.view.ViewGroup;
 
 import com.example.fluxitdemo.R;
 
-import java.util.TimerTask;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class PublishFragment extends Fragment {
 
-    private CircleImageView circleImageViewProducts;
-    private CircleImageView circleImageViewVehicles;
-    private CircleImageView circleImageViewRealState;
-    private CircleImageView circleImageServices;
+    private CardView circleImageViewProducts;
+    private CardView circleImageViewVehicles;
+    private CardView circleImageViewRealState;
+    private CardView circleImageServices;
 
 
 
